@@ -2,11 +2,11 @@
 
 ## ባህሪያት / Features
 
-- 🖥️ Responsive grid/list layouts
-- ↔️ Cross-container drag & drop
-- 🚀 Virtual scrolling performance
-- 🛠️ Customizable drag handles
-- 📦 External drag source support
+- 🖥️ Responsive Grid & List Layouts: Seamlessly adapt to any screen size for a polished user experience.
+- 📦 Drag-and-Drop Sorting: Intuitive reordering of items within a single grid or list.
+- ↔️ Multi-Grid Drag & Drop: Move items across multiple grids or lists with shared groupId.
+- 🚀 Virtual Scrolling: Optimize performance for large datasets by rendering only visible items.
+- 🛠️ Customizable Drag Handles: Define custom drag handles for tailored interactions.
 
 ## ለመጫን / Installation
 
@@ -48,7 +48,7 @@ function TodoList() {
 </>
 ```
 
-## የላቁቁ ምሳሌዎች / Advanced Examples
+## የላቁ ምሳሌዎች / Advanced Examples
 
 ### ካንባን ሰንጠረዥ / Kanban Board
 
@@ -82,19 +82,19 @@ function TodoList() {
 
 ### Props
 
-| Prop               | Type           | Description                          |
-| ------------------ | -------------- | ------------------------------------ |
-| mode               | 'grid'\|'list' | Layout type                          |
-| isSortable         | boolean        | Enable drag sorting                  |
-| groupId            | string         | Container grouping ID                |
-| dragHandleSelector | string         | CSS selector for custom drag handle  |
-| dragSources        | array          | External drag source configurations  |
-| options            | object         | Advanced configuration:              |
-|                    |                | - gutter: Spacing between items      |
-|                    |                | - scrollSpeed: Auto-scroll speed     |
-|                    |                | - reactSpringTension: Animation feel |
-| onMovedEvent       | function       | Drag completion callback             |
-| onItemClick        | function       | Item click handler                   |
+| Prop                 | Type               | Description                                                         |
+| -------------------- | ------------------ | ------------------------------------------------------------------- |
+| `mode`               | `"grid" \| "list"` | Sets the layout type: grid or list.                                 |
+| `isSortable`         | `boolean`          | Enables drag-and-drop sorting within the container.                 |
+| `groupId`            | `string`           | Groups containers for cross-container drag-and-drop.                |
+| `dragHandleSelector` | `string`           | CSS selector for custom drag handles (e.g., `.drag-handle`).        |
+| `dragSources`        | `array`            | Configurations for external drag sources.                           |
+| `options`            | `object`           | Advanced settings:                                                  |
+|                      |                    | - `gutter`: Spacing between items (px).                             |
+|                      |                    | - `scrollSpeed`: Auto-scroll speed during drag.                     |
+|                      |                    | - `reactSpringTension`: Animation tension for drag interactions.    |
+| `onMovedEvent`       | `function`         | Callback triggered after a drag completes. See below for signature. |
+| `onItemClick`        | `function`         | Callback triggered on item click. See below for signature.          |
 
 ### Callbacks
 
