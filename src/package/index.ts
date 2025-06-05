@@ -1,12 +1,7 @@
 import { Sentereige } from "./components";
 import { ItemPosition, SentereigeOptions, SentereigeProps } from "./types";
 
-// Export the main component
+// Export the main component with its props type
 export { Sentereige };
-
-// Export key types/interfaces for external consumption
+export type { Sentereige as SentereigeComponent } from "./components";
 export type { ItemPosition, SentereigeOptions, SentereigeProps };
-
-// You might also want to export other things if they are part of your public API
-// For example, if you want users to directly access `useVirtualScroll`:
-// export { useVirtualScroll } from './hooks';

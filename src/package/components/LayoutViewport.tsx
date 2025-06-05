@@ -40,8 +40,8 @@ export const LayoutViewport: FC<LayoutViewportProps> = ({
   return (
     <div
       style={{
-        minHeight: "100vh",
-        height: "100%",
+        minHeight: "500px", // if items are overflown, if not add items + 1
+        // height: "100%",
         display: "flex",
         flexDirection: "column",
         ...style,

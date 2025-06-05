@@ -68,7 +68,7 @@ function TodoList() {
 <Sentereige
   mode="grid"
   dragHandleSelector=".drag-handle"
-  style={{ background: "#f5f5f5" }}
+  style={{ background: "#f5f5f5", minHeight: "60vh", width: "1200px" }}
 >
   {columns.map((col) => (
     <Sentereige
@@ -80,7 +80,7 @@ function TodoList() {
       onMovedEvent={(key, fromGroup, fromPos, toGroup, toPos) => {
         console.log(`Moved ${key} from ${fromGroup} to ${toGroup}`);
       }}
-      style={{ background: "#ffffff" }}
+      style={{ background: "#ffffff", minHeight: "60vh", width: "400px" }}
     >
       {col.items.map((item) => (
         <KanbanCard key={item.id} {...item} className="drag-handle" />

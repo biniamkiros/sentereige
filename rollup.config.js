@@ -22,7 +22,12 @@ export default {
     commonjs(),
     typescript({
       tsconfig: "./tsconfig.json",
-      exclude: ["**/*.test.ts"],
+      exclude: ["**/*.test.ts", "src/stories/**"],
+      declaration: true,
+      declarationDir: "dist/types",
+      declarationMap: true,
+      outDir: "dist/types",
+      rootDir: "src/package",
     }),
     terser({
       compress: {
