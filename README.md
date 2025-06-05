@@ -10,17 +10,11 @@
 
 ## ማሳያዎች / Demos
 
-### የፍርግርግ አቀማመጥ / Grid Layout ### የዝርዝር አቀማመጥ / List Layout ### የካንባን ሰንጠረዥ / Kanban Board
+| Grid Layout | List Layout | Kanban Board |
+|------------|------------|-------------|
+| ![Grid Demo](https://github.com/user-attachments/assets/47170e8b-5a97-4965-9ba3-594fb820d9d7) | ![List Demo](https://github.com/user-attachments/assets/2f86e771-945b-45ed-b872-f4a8c2cb79f3) | ![Kanban Demo](https://github.com/user-attachments/assets/b5b3c2d0-720b-4700-8685-930d26775d52) |
+| **የፍርግርግ አቀማመጥ** | **የዝርዝር አቀማመጥ** | **የካንባን ሰንጠረዥ** |
 
-<video src="https://github.com/user-attachments/assets/47170e8b-5a97-4965-9ba3-594fb820d9d7" type="video/mp4" width="30%" controls>
-</video>
-
-
-<video src="https://github.com/user-attachments/assets/2f86e771-945b-45ed-b872-f4a8c2cb79f3" type="video/mp4" width="30%" controls>
-</video>
-
-<video src="https://github.com/user-attachments/assets/b5b3c2d0-720b-4700-8685-930d26775d52" type="video/mp4" width="30%" controls>
-</video>
 
 
 
