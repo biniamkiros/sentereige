@@ -3,25 +3,25 @@
 ## ባህሪያት / Features
 
 - 🖥️ Responsive Grid & List Layouts: Seamlessly adapt to any screen size for a polished user experience.
+- 📦 Drag-and-Drop Sorting: Intuitive reordering of items within a single grid or list.
+- ↔️ Multi-Grid Drag & Drop: Move items across multiple grids or lists with shared groupId.
+- 🚀 Virtual Scrolling: Optimize performance for large datasets by rendering only visible items.
+- 🛠️ Customizable Drag Handles: Define custom drag handles for tailored interactions.
 
 ## ማሳያዎች / Demos
 
 ### የፍርግርግ አቀማመጥ / Grid Layout
 
-![Grid Demo](./src/demos/grid.mp4)
+![Grid Demo]([./src/demos/grid.mp4](https://github.com/user-attachments/assets/47170e8b-5a97-4965-9ba3-594fb820d9d7))
 
 ### የዝርዝር አቀማመጥ / List Layout
 
-![List Demo](./src/demos/list.mp4)
+![List Demo](https://github.com/user-attachments/assets/2f86e771-945b-45ed-b872-f4a8c2cb79f3)
 
 ### የካንባን ሰንጠረዥ / Kanban Board
 
-![Kanban Demo](./src/demos/kanban.mp4)
+![Kanban Demo](https://github.com/user-attachments/assets/b5b3c2d0-720b-4700-8685-930d26775d52)
 
-- 📦 Drag-and-Drop Sorting: Intuitive reordering of items within a single grid or list.
-- ↔️ Multi-Grid Drag & Drop: Move items across multiple grids or lists with shared groupId.
-- 🚀 Virtual Scrolling: Optimize performance for large datasets by rendering only visible items.
-- 🛠️ Customizable Drag Handles: Define custom drag handles for tailored interactions.
 
 ## ለመጫን / Installation
 
