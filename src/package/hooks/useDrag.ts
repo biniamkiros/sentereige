@@ -1,12 +1,14 @@
-import React, {
+import {
+  MouseEvent,
+  TouchEvent,
+  createElement,
+  cloneElement,
   useRef,
   useEffect,
   useCallback,
   useReducer,
-  ReactElement,
 } from "react";
-import { DragProps, MouseOrTouchEvent } from "../types";
-import { DragState, DragAction } from "../types";
+import { DragProps } from "../types";
 import { dragReducer } from "../reducers";
 import { getEventCoords } from "../utils";
 
@@ -241,7 +243,7 @@ export const useDrag = ({
    */
   const handleMouseDown = useCallback(
     (
-      e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>,
+      e: MouseEvent<HTMLDivElement> | TouchEvent<HTMLDivElement>,
       key: string
     ) => {
       initialPressKeyRef.current = key; // Store the key of the initially pressed item.
@@ -274,7 +276,7 @@ export const useDrag = ({
 
       const draggedItem = itemRefs.current[key];
       if (!draggedItem) {
-        console.warn(`Stagrid: itemRef for key ${key} is null`);
+        console.warn(`DragItemRef for key ${key} is null`);
         return;
       }
 
@@ -310,7 +312,7 @@ export const useDrag = ({
         const draggedItem = itemRefs.current[currentKey];
         if (!draggedItem) {
           console.warn(
-            `Stagrid: itemRef for key ${currentKey} is null during long press initiation`
+            `drag itemRef for key ${currentKey} is null during long press initiation`
           );
           // If item is not found, cancel long press.
           longPressTimerRef.current = null;
@@ -538,15 +540,15 @@ export const useDrag = ({
           // Extract the actual React element content from the clone.
           const thirdDiv = getDragContent(clone);
           const innerMostDiv = thirdDiv
-            ? React.createElement("div", {
+            ? createElement("div", {
                 dangerouslySetInnerHTML: { __html: thirdDiv.outerHTML },
               })
-            : React.createElement("div", {
+            : createElement("div", {
                 dangerouslySetInnerHTML: { __html: clone.outerHTML },
               });
 
           // Clone the element with its key.
-          const innerMostDivWithKey = React.cloneElement(innerMostDiv, {
+          const innerMostDivWithKey = cloneElement(innerMostDiv, {
             key: clone.dataset.key,
           });
 
@@ -600,7 +602,7 @@ export const useDrag = ({
    * @param e The mouse or touch event.
    */
   const handleMouseUp = useCallback(
-    (e: MouseEvent | TouchEvent) => {
+    (e: globalThis.MouseEvent | globalThis.TouchEvent) => {
       // Clear any active long press timer.
       if (longPressTimerRef.current) {
         clearTimeout(longPressTimerRef.current);
@@ -653,7 +655,7 @@ export const useDrag = ({
       // Get the original item's DOM element for final position.
       const draggedItem = itemRefs.current[dragState.draggingId];
       if (!draggedItem) {
-        console.error("Item not found", dragState.draggingId);
+        console.error("Drag item not found", dragState.draggingId);
         // Fallback cleanup if item is missing.
         if (cloneRef.current?.parentNode) {
           document.body.removeChild(cloneRef.current);
@@ -673,7 +675,7 @@ export const useDrag = ({
 
       const current = cloneRef.current;
       if (!current) {
-        console.warn("Stagrid: Clone ref is not available");
+        console.warn("Drag item ref is not available");
         cloneRef.current = null;
         lastTargetKeyRef.current = null;
         return;
@@ -689,8 +691,8 @@ export const useDrag = ({
       // Notify the parent component about the item's move.
       if (
         itemKey &&
-        groupId &&
-        sourceId &&
+        // groupId &&
+        // sourceId &&
         !isNaN(sourceIndex) &&
         toIndex > -1
       ) {
@@ -698,14 +700,22 @@ export const useDrag = ({
         if (groupId !== sourceId || sourceIndex !== toIndex) {
           notifyItemMovedRef.current?.(
             itemKey,
-            sourceId,
+            sourceId ?? "",
             sourceIndex,
             groupId,
             toIndex
           );
+        } else {
+          console.warn("No change in move operation", {
+            itemKey,
+            groupId,
+            sourceId,
+            sourceIndex,
+            toIndex,
+          });
         }
       } else {
-        console.warn("Stagrid: Invalid move operation", {
+        console.warn("Invalid move operation", {
           itemKey,
           groupId,
           sourceId,

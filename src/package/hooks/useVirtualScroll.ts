@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useCallback, useState } from "react";
+import { RefObject, useEffect, useCallback, useState } from "react";
 import { ItemPosition } from "../types";
 
 /**
@@ -12,7 +12,7 @@ import { ItemPosition } from "../types";
  * @author ቢኒያም ኪሮስ (Biniam Kiros)
  */
 export const useVirtualScroll = (
-  containerRef: React.RefObject<HTMLDivElement | null>,
+  containerRef: RefObject<HTMLDivElement | null>,
   itemCount: number,
   positions: ItemPosition[],
   isScrolling: boolean,

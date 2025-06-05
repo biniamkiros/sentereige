@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
 import { Sentereige } from "../package/components";
+import { showToast } from "./utils/toast";
 
 const meta: Meta<typeof Sentereige> = {
   title: "Components/Kanban",
@@ -17,7 +18,7 @@ const initialColumns = [
     cards: Array.from({ length: 10 }, (_, i) => ({
       id: `todo-${i + 1}`,
       content: `Task ${i + 1}`,
-      color: `hsl(${Math.floor(Math.random() * 360)}, 70%, 65%)`,
+      color: `hsl(${Math.floor(Math.random() * 360)}, 65%, 60%)`,
     })),
   },
   {
@@ -93,11 +94,11 @@ export const Kanban: Story = {
                 toGroupId,
                 toPosition
               ) => {
-                console.log(
+                showToast(
                   `Item moved: ${key} from group ${fromGroupId} index ${fromPosition} to group ${toGroupId} index ${toPosition}`
                 );
               }}
-              onItemClick={(key: string) => console.log("Item clicked!", key)}
+              onItemClick={(key: string) => showToast(`Item clicked! ${key}`)}
             >
               {column.cards.map((card) => (
                 <div
@@ -105,44 +106,20 @@ export const Kanban: Story = {
                   style={{
                     border: "8px solid rgba(0, 0, 0, 0.1)",
                     borderRadius: "8px",
-                    // padding: "10px",
-                    // marginBottom: "8px",
-                    // background: card.color,
                     cursor: "pointer",
-                    // display: "flex",
-                    // flexDirection: "column",
                     gap: "6px",
-
                     padding: "16px",
-                    // width: "100%",
-                    // height: "100px",
                     background: card.color,
                     display: "flex",
                     flexDirection: "column",
-                    justifyContent: "center", // Changed to center vertically
-                    alignItems: "center", // Added to center horizontally
-                    // cursor: "pointer",
+                    justifyContent: "center",
+                    alignItems: "center",
                     overflow: "hidden",
                     transition: "background 0.2s ease",
                     margin: "4px",
                     userSelect: "none",
                   }}
                 >
-                  <div
-                    className="drag-handle-child"
-                    // style={{
-                    //   fontSize: "0.8rem",
-                    //   color: "#ffffff",
-                    //   opacity: 0.9,
-                    //   textAlign: "center",
-                    //   padding: "4px",
-                    //   borderRadius: "2px",
-                    //   background: "rgba(0, 0, 0, 0.15)",
-                    //   cursor: "grab",
-                    // }}
-                  >
-                    Drag me
-                  </div>
                   <h1
                     style={{
                       margin: 0,

@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 import { LayoutItem } from "./LayoutItem";
 import { LayoutViewportProps } from "../types";
 
@@ -8,7 +8,7 @@ import { LayoutViewportProps } from "../types";
  * @param props `LayoutViewportProps`
  * @author ቢኒያም ኪሮስ (Biniam Kiros)
  */
-export const LayoutViewport: React.FC<LayoutViewportProps> = ({
+export const LayoutViewport: FC<LayoutViewportProps> = ({
   mode,
   orderedChildren,
   itemPositions,

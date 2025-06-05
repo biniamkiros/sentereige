@@ -1,4 +1,11 @@
-import React, { useRef, useEffect, forwardRef, Ref } from "react";
+import {
+  useRef,
+  useEffect,
+  forwardRef,
+  Ref,
+  MutableRefObject,
+  MouseEvent,
+} from "react";
 import { useSpring, animated } from "react-spring";
 import { LayoutItemProps } from "../types";
 
@@ -88,23 +95,22 @@ export const LayoutItem = forwardRef<HTMLDivElement, LayoutItemProps>(
           if (typeof ref === "function") {
             ref(node);
           } else if (ref) {
-            (ref as React.MutableRefObject<HTMLDivElement | null>).current =
-              node;
+            (ref as MutableRefObject<HTMLDivElement | null>).current = node;
           }
         }}
         data-grid-item // Custom data attribute for identification.
-        onMouseDown={(e: React.MouseEvent<HTMLDivElement>) =>
+        onMouseDown={(e: MouseEvent<HTMLDivElement>) =>
           isSortable // Only enable drag initiation if sortable.
             ? position.key !== undefined && position.key !== null // Ensure item has a key.
               ? onMouseDown(e, position.key) // Call the drag initiation handler.
-              : console.log("Child without key")
+              : console.log("Child without key found.")
             : null
         }
         onTouchStart={(e: React.TouchEvent<HTMLDivElement>) =>
           isSortable // Same for touch events.
             ? position.key !== undefined && position.key !== null
               ? onMouseDown(e, position.key)
-              : console.log("Child without key")
+              : console.log("Child without key found.")
             : null
         }
         style={{

@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Sentereige } from "../package/components";
 import { colors } from "@react-spring/shared";
+import { showToast } from "./utils/toast";
 
 const meta: Meta<typeof Sentereige> = {
   title: "Components/List",
@@ -16,25 +17,35 @@ const cardData = Array.from({ length: 50 }, (_, i) => ({
 }));
 export const Default: Story = {
   render: () => (
-    <Sentereige mode="list" dragHandleSelector=".drag-handle" isSortable>
+    <Sentereige
+      mode="list"
+      dragHandleSelector=".drag-handle"
+      isSortable
+      onMovedEvent={(key, fromGroupId, fromPosition, toGroupId, toPosition) => {
+        showToast(
+          `Item moved: ${key} from group ${fromGroupId} index ${fromPosition} to group ${toGroupId} index ${toPosition}`
+        );
+      }}
+      onItemClick={(key: string) => showToast(`Item clicked! ${key}`)}
+    >
       {cardData.map((card) => (
         <div
           key={card.id}
           style={{
             border: "8px solid rgba(0, 0, 0, 0.1)",
             borderRadius: "8px",
+            cursor: "pointer",
+            gap: "6px",
             padding: "16px",
-            width: "100%",
-            height: "100px",
             background: card.color,
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center", // Changed to center vertically
-            alignItems: "center", // Added to center horizontally
-            cursor: "pointer",
+            justifyContent: "center",
+            alignItems: "center",
             overflow: "hidden",
             transition: "background 0.2s ease",
             margin: "4px",
+            userSelect: "none",
           }}
         >
           <div className="drag-handle">Drag me</div>

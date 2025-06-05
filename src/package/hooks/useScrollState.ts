@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import { RefObject, useRef, useEffect, useState } from "react";
 
 /**
  * Custom hook to track whether a scrollable element is currently scrolling.
@@ -9,7 +9,7 @@ import React, { useRef, useEffect, useState } from "react";
  * @author ቢኒያም ኪሮስ (Biniam Kiros)
  */
 export const useScrollState = (
-  containerRef: React.RefObject<HTMLElement | null>,
+  containerRef: RefObject<HTMLElement | null>,
   scrollDebounceDelayMs = 100
 ) => {
   const [isScrolling, setIsScrolling] = useState(false);

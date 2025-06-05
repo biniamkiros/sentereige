@@ -1,4 +1,4 @@
-import React, { RefObject, ReactElement, Ref } from "react";
+import { ReactElement, CSSProperties } from "react";
 import { ItemPosition } from "./common";
 import { SentereigeOptions } from "./options";
 
@@ -13,7 +13,7 @@ export interface SentereigeProps {
   /** Layout mode: 'list' for single column, 'grid' for multiple columns. */
   mode: "list" | "grid";
   /** Child React elements to be rendered and managed. */
-  children: React.ReactElement[];
+  children: ReactElement[];
   /** CSS selector for a drag handle within an item. If not provided, the whole item is draggable. */
   dragHandleSelector?: string;
   /** Array of group IDs that can be dragged into this Sentereige instance. */
@@ -31,7 +31,7 @@ export interface SentereigeProps {
     toPosition: number
   ) => void;
   /** Custom CSS styles for the container. */
-  style?: React.CSSProperties;
+  style?: CSSProperties;
   /** Optional Sentereige configuration options. */
   options?: SentereigeOptions;
 }

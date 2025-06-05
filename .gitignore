@@ -35,3 +35,6 @@ yarn-error.log*
 # System Files
 .DS_Store
 Thumbs.db
+
+# generated files
+bundle-analysis.html

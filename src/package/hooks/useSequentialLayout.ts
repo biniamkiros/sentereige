@@ -1,4 +1,4 @@
-import React, { useRef, useCallback, RefObject } from "react";
+import { useRef, useCallback, RefObject } from "react";
 import { ItemPosition } from "../types";
 
 /**

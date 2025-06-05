@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { colors } from "@react-spring/shared";
 import { Sentereige } from "../package/components";
 import { useState } from "react";
+import { showToast } from "./utils/toast";
 
 const meta: Meta<typeof Sentereige> = {
   title: "Components/Grid",
@@ -77,11 +78,104 @@ export const Default: Story = {
 
     return (
       <>
-        <div>Item count: {items.length}</div>
-        <button onClick={addStartItem}>Add Item at the start</button>
-        <button onClick={addMiddleItem}>Add Item at the middle</button>
-        <button onClick={addEndItem}>Add Item at the end</button>
-        <Sentereige mode="grid" isSortable>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            fontFamily: "Arial, sans-serif",
+            margin: "20px auto",
+            width: "fit-content",
+          }}
+        >
+          <div
+            style={{
+              fontFamily: "Arial, sans-serif",
+              fontSize: "1rem",
+              fontWeight: "bold",
+              color: "#333",
+              padding: "15px",
+              borderRadius: "8px",
+              textAlign: "center",
+            }}
+          >
+            Count: {items.length}
+          </div>
+          <div
+            style={{
+              display: "flex",
+              gap: "10px",
+            }}
+          >
+            <button
+              onClick={addStartItem}
+              style={{
+                fontFamily: "Arial, sans-serif",
+                fontSize: "1rem",
+                padding: "10px 20px",
+                margin: "5px",
+                border: "none",
+                borderRadius: "5px",
+                backgroundColor: "#eaeaea",
+                color: "black",
+                cursor: "pointer",
+                transition: "background-color 0.3s, transform 0.2s",
+              }}
+            >
+              Add Item at the start
+            </button>
+            <button
+              onClick={addMiddleItem}
+              style={{
+                fontFamily: "Arial, sans-serif",
+                fontSize: "1rem",
+                padding: "10px 20px",
+                margin: "5px",
+                border: "none",
+                borderRadius: "5px",
+                backgroundColor: "#eaeaea",
+                color: "black",
+                cursor: "pointer",
+                transition: "background-color 0.3s, transform 0.2s",
+              }}
+            >
+              Add Item at the middle
+            </button>
+            <button
+              onClick={addEndItem}
+              style={{
+                fontFamily: "Arial, sans-serif",
+                fontSize: "1rem",
+                padding: "10px 20px",
+                margin: "5px",
+                border: "none",
+                borderRadius: "5px",
+                backgroundColor: "#eaeaea",
+                color: "black",
+                cursor: "pointer",
+                transition: "background-color 0.3s, transform 0.2s",
+              }}
+            >
+              Add Item at the end
+            </button>
+          </div>
+        </div>
+        <Sentereige
+          mode="grid"
+          isSortable
+          onMovedEvent={(
+            key,
+            fromGroupId,
+            fromPosition,
+            toGroupId,
+            toPosition
+          ) => {
+            showToast(
+              `Item moved: ${key} from group ${fromGroupId} index ${fromPosition} to group ${toGroupId} index ${toPosition}`
+            );
+          }}
+          onItemClick={(key: string) => showToast(`Item clicked! ${key}`)}
+        >
           {items.map((card) => (
             <div
               key={card.id}
