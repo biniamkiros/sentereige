@@ -16,7 +16,7 @@
 </video>
 
 
-<video src="https://github.com/user-attachments/assets/2f86e771-945b-45ed-b872-f4a8c2cb79f3" type="video/mp4" width="300%" controls>
+<video src="https://github.com/user-attachments/assets/2f86e771-945b-45ed-b872-f4a8c2cb79f3" type="video/mp4" width="30%" controls>
 </video>
 
 <video src="https://github.com/user-attachments/assets/b5b3c2d0-720b-4700-8685-930d26775d52" type="video/mp4" width="30%" controls>
