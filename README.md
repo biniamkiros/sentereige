@@ -14,11 +14,11 @@ Sentereige is a React component library for creating interactive layouts with tr
 
 የፍርግርግ ፣ ዝርዝር እና ካንባን አቀማመጥ / Grid List and Kanban Layouts
 
-<img src="https://github.com/user-attachments/assets/6e1a9e80-9d96-48ad-9fdb-5ff6202c0419" height="300">
+<img src="https://github.com/user-attachments/assets/6e1a9e80-9d96-48ad-9fdb-5ff6202c0419" height="200">
 
-<img src="https://github.com/user-attachments/assets/0e20989b-a78b-48b3-b659-5021abdc29e4" height="300">
+<img src="https://github.com/user-attachments/assets/0e20989b-a78b-48b3-b659-5021abdc29e4" height="200">
 
-<img src="https://github.com/user-attachments/assets/8b37df20-21a9-49df-8f15-6a32803390e7" height="300">
+<img src="https://github.com/user-attachments/assets/8b37df20-21a9-49df-8f15-6a32803390e7" height="200">
 
 ## ለመጫን / Installation
 
