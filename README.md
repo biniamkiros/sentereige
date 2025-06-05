@@ -12,17 +12,22 @@
 
 ### የፍርግርግ አቀማመጥ / Grid Layout
 
-<video src="https://github.com/user-attachments/assets/47170e8b-5a97-4965-9ba3-594fb820d9d7" />
-
+<video width="100%" controls>
+  <source src="https://github.com/user-attachments/assets/47170e8b-5a97-4965-9ba3-594fb820d9d7" type="video/mp4">
+</video>
 
 ### የዝርዝር አቀማመጥ / List Layout
 
-<video src="https://github.com/user-attachments/assets/2f86e771-945b-45ed-b872-f4a8c2cb79f3" />
-
+<video width="100%" controls>
+  <source src="https://github.com/user-attachments/assets/2f86e771-945b-45ed-b872-f4a8c2cb79f3" type="video/mp4">
+</video>
 
 ### የካንባን ሰንጠረዥ / Kanban Board
 
-<video src="https://github.com/user-attachments/assets/b5b3c2d0-720b-4700-8685-930d26775d52" />
+<video width="100%" controls>
+  <source src="https://github.com/user-attachments/assets/b5b3c2d0-720b-4700-8685-930d26775d52" type="video/mp4">
+</video>
+
 
 
 ## ለመጫን / Installation
