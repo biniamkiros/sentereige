@@ -10,7 +10,7 @@
 
 ## ማሳያዎች / Demos
 
-የፍርግርግ የዝርዝር እና የካንባን አቀማመጥ / Grid List and Kanban Layouts
+የፍርግርግ ፣ ዝርዝር እና ካንባን አቀማመጥ / Grid List and Kanban Layouts
 
 <img src="https://github.com/user-attachments/assets/6e1a9e80-9d96-48ad-9fdb-5ff6202c0419" height="300">
 
