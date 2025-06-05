@@ -10,22 +10,20 @@
 
 ## ማሳያዎች / Demos
 
-### የፍርግርግ አቀማመጥ / Grid Layout
-
-<video src="https://github.com/user-attachments/assets/47170e8b-5a97-4965-9ba3-594fb820d9d7" type="video/mp4" width="100%" controls>
-</video>
-
-### የዝርዝር አቀማመጥ / List Layout
-
-<video src="https://github.com/user-attachments/assets/2f86e771-945b-45ed-b872-f4a8c2cb79f3" type="video/mp4" width="100%" controls>
-</video>
-
-### የካንባን ሰንጠረዥ / Kanban Board
-
-<video src="https://github.com/user-attachments/assets/b5b3c2d0-720b-4700-8685-930d26775d52" type="video/mp4" width="100%" controls>
-</video>
-
-
+<div style="display: flex; justify-content: space-between; margin: 20px 0;">
+  <div style="width: 30%;">
+    <h4>የፍርግርግ አቀማመጥ / Grid Layout</h4>
+    <video src="https://github.com/user-attachments/assets/47170e8b-5a97-4965-9ba3-594fb820d9d7" type="video/mp4" width="100%" controls></video>
+  </div>
+  <div style="width: 30%;">
+    <h4>የዝርዝር አቀማመጥ / List Layout</h4>
+    <video src="https://github.com/user-attachments/assets/2f86e771-945b-45ed-b872-f4a8c2cb79f3" type="video/mp4" width="100%" controls></video>
+  </div>
+  <div style="width: 30%;">
+    <h4>የካንባን ሰንጠረዥ / Kanban Board</h4>
+    <video src="https://github.com/user-attachments/assets/b5b3c2d0-720b-4700-8685-930d26775d52" type="video/mp4" width="100%" controls></video>
+  </div>
+</div>
 
 ## ለመጫን / Installation
 
