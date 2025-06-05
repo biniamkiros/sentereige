@@ -3,6 +3,21 @@
 ## ባህሪያት / Features
 
 - 🖥️ Responsive Grid & List Layouts: Seamlessly adapt to any screen size for a polished user experience.
+
+## ማሳያዎች / Demos
+
+### የፍርግርግ አቀማመጥ / Grid Layout
+
+![Grid Demo](./src/demos/grid.mp4)
+
+### የዝርዝር አቀማመጥ / List Layout
+
+![List Demo](./src/demos/list.mp4)
+
+### የካንባን ሰንጠረዥ / Kanban Board
+
+![Kanban Demo](./src/demos/kanban.mp4)
+
 - 📦 Drag-and-Drop Sorting: Intuitive reordering of items within a single grid or list.
 - ↔️ Multi-Grid Drag & Drop: Move items across multiple grids or lists with shared groupId.
 - 🚀 Virtual Scrolling: Optimize performance for large datasets by rendering only visible items.
@@ -125,3 +140,27 @@ function TodoList() {
 npm run dev  # Start Storybook
 npm run build  # Build package
 ```
+
+## ፈቃድ / License
+
+MIT License
+
+Copyright (c) 2025 Biniam Kiros
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

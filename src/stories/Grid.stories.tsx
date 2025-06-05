@@ -195,6 +195,7 @@ export const Default: Story = {
                 overflow: "hidden",
                 transition: "background 0.2s ease",
                 margin: "4px",
+                userSelect: "none",
               }}
             >
               <h1
