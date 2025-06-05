@@ -12,7 +12,9 @@
 
 ### የፍርግርግ አቀማመጥ / Grid Layout
 
-![Grid Demo](https://github.com/user-attachments/assets/47170e8b-5a97-4965-9ba3-594fb820d9d7))
+
+<video src="[https://github.com/user-attachments/assets/d507aff8-c141-4b95-a4a4-3c1ccad83db1](https://github.com/user-attachments/assets/47170e8b-5a97-4965-9ba3-594fb820d9d7)" height="400">
+![Grid Demo]())
 
 ### የዝርዝር አቀማመጥ / List Layout
 
