@@ -1,5 +1,7 @@
 # ሰንጠረዥ (Sentereige) - React Layout Component
 
+Sentereige is a React component library for creating interactive layouts with true masonry/grid systems. It handles nested structures and items with unknown dimensions, automatically packing items left-to-right in the shortest column while maintaining optimal spacing.
+
 ## ባህሪያት / Features
 
 - 🖥️ Responsive Grid & List Layouts: Seamlessly adapt to any screen size for a polished user experience.
@@ -17,7 +19,6 @@
 <img src="https://github.com/user-attachments/assets/0e20989b-a78b-48b3-b659-5021abdc29e4" height="300">
 
 <img src="https://github.com/user-attachments/assets/8b37df20-21a9-49df-8f15-6a32803390e7" height="300">
-
 
 ## ለመጫን / Installation
 
